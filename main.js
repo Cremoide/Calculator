@@ -1,6 +1,5 @@
 // Functions for all of the basic math operators:
 // add, subtract, multiply, divide.
-
 function add(a, b) {
     return a + b;
 }
@@ -21,14 +20,12 @@ function divide(a, b) {
 }
 
 // Variables for the operation parameters. (And display updating).
-
 let numberOne = 0;
 let numberTwo = 0;
 let operator = "";
 let justEvaluated = false;
 
 // Function that takes two numbers and call one of the above operator functions.
-
 function operate(operator, a, b) {
     switch (operator) {
         case "+":
@@ -43,14 +40,12 @@ function operate(operator, a, b) {
 }
 
 // Functions to update and store the display numbers.
-
 const input = document.getElementById("number");
 let currentDisplay = "";
 
 const buttons = document.querySelectorAll(".btn");
 
 // Calculator logic.
-
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const value = button.textContent;
@@ -111,13 +106,21 @@ buttons.forEach(button => {
             }
         }
 
-        const floatBtn = document.getElementById("floatBtn");
+        // EXTRAS
 
-        // Disable the . button if there’s already a decimal separator in the display.
+        // . button disables if there’s already a decimal separator in the display.
+        const floatBtn = document.getElementById("float");
         if (input.value.includes(".")) {
             floatBtn.disabled = true;
         } else {
             floatBtn.disabled = false;
+        }
+
+        // “Backspace” button for undo last input.
+        if (value === "←") {
+            currentDisplay = currentDisplay.slice(0, -1);
+            input.value = currentDisplay;
+            justEvaluated = false;
         }
     });
 });
