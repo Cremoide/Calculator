@@ -110,5 +110,14 @@ buttons.forEach(button => {
                 console.log(`Operation result: ${result}`);
             }
         }
+
+        const floatBtn = document.getElementById("floatBtn");
+
+        // Disable the . button if there’s already a decimal separator in the display.
+        if (input.value.includes(".")) {
+            floatBtn.disabled = true;
+        } else {
+            floatBtn.disabled = false;
+        }
     });
 });
