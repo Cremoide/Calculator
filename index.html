@@ -4,46 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styes.css">
-    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator ✖️</title>
 </head>
 
 <body>
-    <main>
-        <h1>Calculate</h1>
-        <br>
-    
-        <div class="container">
-    
-            <div class="calculator">
-    
-                <input id="number" type="text" placeholder="0" readonly>
-    
-                <div class="calculator-buttons">
-                    <button class="btn">AC</button>
-                    <button class="btn">+/-</button>
-                    <button class="btn">%</button>
-                    <button class="btn">/</button>
-                    <button class="btn">7</button>
-                    <button class="btn">8</button>
-                    <button class="btn">9</button>
-                    <button class="btn">*</button>
-                    <button class="btn">4</button>
-                    <button class="btn">5</button>
-                    <button class="btn">6</button>
-                    <button class="btn">-</button>
-                    <button class="btn">1</button>
-                    <button class="btn">2</button>
-                    <button class="btn">3</button>
-                    <button class="btn">+</button>
-                    <button class="btn">←</button>
-                    <button class="btn">0</button>
-                    <button id="float" class="btn">.</button>
-                    <button class="btn">=</button>
-                </div>
-    
+    <main class="centered-wrapper">
+        <section class="header">
+            <h1>Calculate</h1>           
+            <small>Now on your browser!</small>
+        </section>
+
+        <div class="calculator">
+            <div class="container">
+                <input class="display" id="number" type="text" inputmode="numeric" placeholder="0" readonly>
+                <button class="btn">AC</button>
+                <button class="btn">+/-</button>
+                <button class="btn">%</button>
+                <button class="btn">/</button>
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">*</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">-</button>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">+</button>
+                <button class="btn">←</button>
+                <button class="btn">0</button>
+                <button id="float" class="btn">.</button>
+                <button class="btn">=</button>
             </div>
+        </div>
     </main>
+
+    <div class="footer center">
+        <small>Trust the process.</small>
+    </div>
 
     <script src="main.js"></script>
 </body>
